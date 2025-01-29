@@ -3,24 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>  </title>
-
 </head>
 <body>
-        {% block pagename  %}
-        <h1> {{ title }} </h1>
-        {% endblock %}
+    {% block pagename %}
+    <div style="border: 1px solid black;">
+        <h1>{{ title }}</h1>
+    </div>
+    {% endblock %}
 
-        {% block menu %}
+    {% block menu %}
+    <div style="border: 1px solid black;">
         <br>
         <a href="#"> Главная страница </a>
-        <br> <a href="http://127.0.0.1:8000/games/"> Игры</a>
-        <br> <a href="http://127.0.0.1:8000/cart/"> Корзина</a>
-        {% endblock %}
+        <br>
+        <a href="http://127.0.0.1:8000/games/"> Игры</a>
+        <br>
+        <a href="http://127.0.0.1:8000/cart/"> Корзина</a>
+    </div>
+    {% endblock %}
 
     <main>
-        {% block content %}
-
-        {% endblock %}
+        <div style="border: 1px solid black;">
+            {% block content %}
+            {% endblock %}
+        </div>
     </main>
 </body>
 </html>
